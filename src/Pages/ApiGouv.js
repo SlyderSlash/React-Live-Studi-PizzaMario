@@ -45,6 +45,7 @@ const ApiGouv = () => {
     setToggle(false);
     return () => {
       setData('');
+      setCompanySelected([]);
     };
   }, [toggle]);
 
@@ -81,7 +82,6 @@ const ApiGouv = () => {
                   <Link
                     ink
                     to='section-company-listing'
-                    delay={500}
                     smooth={true}
                     spy={true}
                     offset={-50}
@@ -95,19 +95,23 @@ const ApiGouv = () => {
               </div>
             </div>
           </div>
-          {data && (
-            <CompanyListing
-              data={data}
-              handleClickSelectedCompany={handleClickSelectedCompany}
-            />
-          )}
+          <section id='section-company-listing' className='section'>
+            {data && (
+              <CompanyListing
+                data={data}
+                handleClickSelectedCompany={handleClickSelectedCompany}
+              />
+            )}
+          </section>
 
-          {companySelected[0] && (
-            <>
-              <CompanyInfo companySelected={companySelected[0]} />
-              <EstablishmentsInfo companySelected={companySelected[0]} />
-            </>
-          )}
+          <section id='section-company-info' className='section'>
+            {companySelected[0] && (
+              <>
+                <CompanyInfo companySelected={companySelected[0]} />
+                <EstablishmentsInfo companySelected={companySelected[0]} />
+              </>
+            )}
+          </section>
         </div>
       </main>
     </>

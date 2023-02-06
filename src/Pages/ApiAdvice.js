@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import Navigation from '../Components/Navigation';
-import { Button } from 'react-bootstrap';
 import axios from 'axios';
 import BotIllustration from '../Components/BotIllustration';
 

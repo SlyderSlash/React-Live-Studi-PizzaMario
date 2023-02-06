@@ -49,7 +49,6 @@ const CardCompany = ({
           </p>
           <Link
             to='section-company-info'
-            delay={500}
             smooth={true}
             spy={true}
             offset={-50}
