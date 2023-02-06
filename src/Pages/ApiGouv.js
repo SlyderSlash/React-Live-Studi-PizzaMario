@@ -6,6 +6,7 @@ import axios from 'axios';
 import CompanyInfo from '../Components/CompanyInfo';
 import EstablishmentsInfo from '../Components/EstablishmentsInfo';
 import CompanyListing from '../Components/CompanyListing';
+import { Link } from 'react-scroll';
 
 // https://recherche-entreprises.api.gouv.fr/search?q=studi&page=1&per_page=10
 const ApiGouv = () => {
@@ -32,12 +33,9 @@ const ApiGouv = () => {
     setCompanySelected(data.filter((el) => el.siren === id));
   };
 
-  console.log(companyNameSearch);
   useEffect(() => {
-    console.log(toggle);
-
     if (toggle) {
-      console.log(url);
+      // console.log(url);
       axios.get(url).then((res) => {
         setData(res.data.results);
         setCompanyNameSearch('');
@@ -80,9 +78,19 @@ const ApiGouv = () => {
                       value={companyNameSearch}
                     />
                   </div>
-                  <button className='link-info-btn btn' onClick={handleClick}>
+                  <Link
+                    ink
+                    to='section-company-listing'
+                    delay={500}
+                    smooth={true}
+                    spy={true}
+                    offset={-50}
+                    duration={600}
+                    className='link-info-btn btn'
+                    onClick={handleClick}
+                  >
                     Rechercher
-                  </button>
+                  </Link>
                 </div>
               </div>
             </div>

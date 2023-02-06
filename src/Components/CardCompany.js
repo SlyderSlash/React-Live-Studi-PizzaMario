@@ -1,5 +1,6 @@
 import React from 'react';
 import company from '../assets/img/company.png';
+import { Link } from 'react-scroll';
 
 function capitalizeFirstLetter(string) {
   return string.charAt(0).toUpperCase() + string.slice(1);
@@ -14,9 +15,6 @@ const CardCompany = ({
   data,
   handleClickSelectedCompany,
 }) => {
-  //   const handleClickSelectedCompany = (siren) => {
-  //     console.log(siren);
-  //   };
   return (
     <>
       <div className='card card-articles m-3'>
@@ -49,13 +47,18 @@ const CardCompany = ({
           <p className='card-text'>
             Qtt étalissements ouverts: {qtytotalEstablishmentOpened}
           </p>
-          <a
+          <Link
+            to='section-company-info'
+            delay={500}
+            smooth={true}
+            spy={true}
+            offset={-50}
+            duration={600}
             className='link-info-btn btn w-100'
-            href={'/api-gouv/#section-company-info'}
-            onClick={() => handleClickSelectedCompany(siren)}
+            onClick={(e) => handleClickSelectedCompany(siren)}
           >
             Plus d'informations
-          </a>
+          </Link>
         </div>
       </div>
     </>

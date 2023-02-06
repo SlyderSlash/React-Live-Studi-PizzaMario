@@ -5,7 +5,10 @@ const CompanyListing = ({ data, handleClickSelectedCompany }) => {
   return (
     <>
       <section id='section-company-listing' className='section'>
-        <h2 className={!data ? 'd-none mt-5' : 'mt-5'} id='listing-company'>
+        {/* <h2 className={!data ? 'd-none mt-5' : 'mt-5'} id='listing-company'>
+          Listing des entreprises
+        </h2> */}
+        <h2 className='mt-5' id='listing-company'>
           Listing des entreprises
         </h2>
 

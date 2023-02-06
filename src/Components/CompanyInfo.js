@@ -54,9 +54,11 @@ const CompanyInfo = ({ companySelected }) => {
             </p>
             <p>
               DATE DE MISE A JOUR :{' '}
-              {companySelected.date_mise_a_jour.slice(5, 7) +
-                '/' +
-                companySelected.date_mise_a_jour.slice(0, 4)}
+              {companySelected.date_mise_a_jour
+                ? companySelected.date_mise_a_jour.slice(5, 7) +
+                  '/' +
+                  companySelected.date_mise_a_jour.slice(0, 4)
+                : 'NC'}
             </p>
           </div>
         </div>
