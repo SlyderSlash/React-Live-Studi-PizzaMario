@@ -1,0 +1,46 @@
+.container-compteur {
+  .wrapper-counter {
+    display: flex;
+    flex-direction: column;
+  }
+  .counter-body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    background: linear-gradient(-45deg, #181a22 19%, rgb(0, 0, 0));
+    border: 1px solid rgb(50, 50, 50);
+    border-radius: 0.8rem;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.395);
+    padding: 3rem;
+    max-width: 25rem;
+    height: 8rem;
+    margin-inline: auto;
+    Button {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+      margin-inline: 0.2rem;
+      text-align: center;
+    }
+    span {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 2.5rem;
+      height: 8rem;
+      text-align: center;
+    }
+    margin-block: 1rem;
+  }
+  Button {
+    margin-inline: auto;
+    height: 2.6rem;
+    margin-block: 0.6rem;
+  }
+  Button:last-child img {
+    width: 3.2rem;
+    padding-right: 0.5rem;
+  }
+}

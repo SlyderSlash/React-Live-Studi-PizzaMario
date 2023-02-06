@@ -1,49 +1,52 @@
-import logo from './logo.svg'
-import './App.css'
-import {ListArticles, TestComponent} from './Components'
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route
-} from 'react-router-dom'
-// index.css
-// App.css
-// Shop.css
-const fakeDate = [
-  {name : 'marguarita', price : 25},
-  {name : '4 saisons', price: 32},
-  {name : 'marguarita sans prix'},
-  {name : '4 saisons', price: 58}
-]
-let point = 0
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Home from './Pages/Home';
+import Compteur from './Pages/Compteur';
+import Articles from './Pages/Articles';
+import ApiAdvice from './Pages/ApiAdvice';
+import ApiGouv from './Pages/ApiGouv';
 
-const addSomePoint = () => {
-  point = point + 1
-  console.log(point)
-}
+const fakeDate = [
+  {
+    id: 0,
+    name: 'marguarita',
+    price: 15,
+    img: './assets/img/pizza-margarita.jpeg',
+  },
+  {
+    id: 1,
+    name: '4 saisons',
+    price: 18,
+    img: './assets/img/pizza-4-saisons.jpg',
+  },
+  {
+    id: 2,
+    name: 'savoyarde',
+    price: 21,
+    img: './assets/img/pizza-savoyarde.webp',
+  },
+  {
+    id: 3,
+    name: 'végétarienne',
+    price: 19,
+    img: './assets/img/pizza-vegetarienne.webp',
+  },
+];
+
 function App() {
   return (
     <Router>
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and Bonjour save to reload.
-            <Routes>
-              <Route path='/List' element={<ListArticles articles={fakeDate}/>} />
-              <Route path='/Test' element={<TestComponent functionClick={addSomePoint} />}/>
-              <Route path='/Pomme' element={<h1>Quel idée des pommes sur une pizza ?!</h1>}/>
-            </Routes> 
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+      <div className='App'>
+        <Routes>
+          <Route path='/' element={<Home />} />
+          <Route
+            path='/listing-articles'
+            element={<Articles articles={fakeDate} />}
+          />
+          <Route path='/counter' element={<Compteur />} />
+          <Route path='/api-advice' element={<ApiAdvice />} />
+          <Route path='/api-gouv' element={<ApiGouv />} />
+          <Route path='*' element={<Home />} />
+        </Routes>
       </div>
     </Router>
   );

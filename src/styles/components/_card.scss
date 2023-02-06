@@ -1,0 +1,65 @@
+.card {
+  position: relative;
+  width: clamp(280px, 20vw, 300px);
+  min-height: 350px;
+  background-color: #181a22;
+  background: linear-gradient(-45deg, #181a22, rgb(0, 0, 0));
+  border-bottom-right-radius: 1.2rem;
+  border-top-right-radius: 1.2rem;
+  border-top-left-radius: 1.2rem;
+  border: 1px solid rgb(0, 0, 0);
+  box-shadow: 0 6px 6px rgba(0, 0, 0, 0.398);
+
+  .card-header {
+    position: relative;
+    height: 200px;
+    width: 100%;
+    min-width: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom-right-radius: 1.2rem;
+    border-top-right-radius: 1.2rem;
+    border-top-left-radius: 1.2rem;
+    border: 1px solid rgba(110, 110, 110, 0.232);
+    box-shadow: 0 6px 6px rgba(0, 0, 0, 0.698);
+    overflow: hidden;
+    .card-img-top {
+      position: relative;
+      z-index: 50;
+      height: 200px;
+      min-width: 350px;
+      object-fit: cover;
+      transition: transform 0.35s ease-in-out;
+      transform-origin: center;
+    }
+    .card-ill-company {
+      filter: invert(9%) sepia(22%) saturate(583%) hue-rotate(190deg)
+        brightness(97%) contrast(96%) drop-shadow(0 4px 6px rgb(0, 0, 0));
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+  .card-header:hover .card-img-top {
+    transform: scale(1.09);
+  }
+  .card-body {
+    .card-title {
+      height: 45px;
+    }
+    .btn {
+      position: relative;
+      z-index: 100;
+    }
+  }
+}
+
+.card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-bottom-right-radius: 1.2rem;
+  border-top-right-radius: 1.2rem;
+  border-top-left-radius: 1.2rem;
+  border: 3px solid #181a22bb;
+}

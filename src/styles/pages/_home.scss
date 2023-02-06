@@ -1,0 +1,12 @@
+.container-home {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 60px);
+  background: radial-gradient(#46464669, #181a22 54%);
+  .illustration-react {
+    max-height: 15rem;
+    filter: drop-shadow(0 0 0.9px rgb(0, 0, 0));
+  }
+}

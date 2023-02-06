@@ -1,0 +1,18 @@
+nav.navbar {
+  background-color: #181a22;
+  background: linear-gradient(-45deg, #181a22, rgb(0, 0, 0));
+  box-shadow: 0 4px 4px rgb(0, 0, 0);
+  border-bottom: 1px solid rgb(50, 50, 50);
+  width: 100vw;
+  .nav-item .nav-link {
+    color: rgb(210, 210, 210);
+  }
+  .navbar-brand,
+  .nav-item .nav-link:hover {
+    color: white;
+  }
+
+  .nav-item .nav-link.active {
+    color: #00d8ff;
+  }
+}

@@ -1,19 +1,31 @@
-import {CardArticle} from './CardArticle'
+import { CardArticle } from './CardArticle';
 
-function ListArticles (props) {
-    if(!props){return <div><h1>Pas d'article</h1></div>}
-    else {
-        const articlesListing = props.articles.map((article)=> {
-            if (article.price) return <CardArticle name={article.name} price={article.price}/>
-            else return null
-        })
-        console.log(articlesListing)
-        return (
-            <div>
-                {articlesListing}
-            </div>
-        )
-    }
+function ListArticles(props) {
+  if (!props) {
+    return (
+      <div>
+        <h1>Listing Pizza vide</h1>
+      </div>
+    );
+  } else {
+    return (
+      <>
+        <ul className='list-inline'>
+          {props.articles.map((article) => {
+            return (
+              <li key={article.id} className='list-inline-item'>
+                <CardArticle
+                  name={article.name}
+                  price={article.price}
+                  img={article.img}
+                />
+              </li>
+            );
+          })}
+        </ul>
+      </>
+    );
+  }
 }
 
-export default ListArticles
+export default ListArticles;
