@@ -31,7 +31,7 @@ function App() {
       <div className="App">
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
-          <p>
+          <section>
             Edit <code>src/App.js</code> and Bonjour save to reload.
             <Routes>
               <Route path='/Delivery' element={<FormDelivery />} />
@@ -39,7 +39,7 @@ function App() {
               <Route path='/Test' element={<TestComponent functionClick={addSomePoint} points={point} />}/>
               <Route path='/Pomme' element={<h1>Quel idée des pommes sur une pizza ?!</h1>}/>
             </Routes> 
-          </p>
+          </section>
           <a
             className="App-link"
             href="https://reactjs.org"
