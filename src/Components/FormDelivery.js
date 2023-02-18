@@ -5,7 +5,7 @@ import StateTypes from './../functions/StateTypes';
 const CitySelector = (props) => {
   const cityList = props.data.map((city) => {
     if (city.nomCommune)
-      return <option value={city.nomCommune}>{city.nomCommune}</option>;
+      return <option key={city.codeCommune} value={city.nomCommune}>{city.nomCommune}</option>;
   });
   return (
     <select name="city" id="city">
@@ -38,7 +38,7 @@ const FormDelivery = (props) => {
   // Read : city
   // Update : setCity
   useEffect(() => {
-      if (!StateTypes.string(zipCode)) return setError('Mauvais Code Postal'); 
+      if (StateTypes.number(zipCode)) return setError('Mauvais Code Postal'); 
   }, [zipCode]);
 
   const handleZipChange = (e) => {

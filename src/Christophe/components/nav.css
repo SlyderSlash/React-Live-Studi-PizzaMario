@@ -1,0 +1,45 @@
+nav {
+  background-color: #61dbfb;
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  border-radius: 50px;
+  margin-top: 5px;
+  height: 80px;
+  margin-left: 10px;
+  margin-right: 2rem;
+}
+h2 {
+  font-family: 'Dancing Script', cursive;
+  color: rgb(28, 35, 68);
+  width: 100%;
+  text-align: left;
+}
+
+ul {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+}
+
+ul li {
+  list-style: none;
+  margin-right: 2rem;
+}
+
+.homeButton {
+  background-color: rgb(28, 35, 68);
+  color: #61dbfb;
+  border: none;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease 0s;
+}
+
+.homeButton:hover {
+  background-color: rgb(38, 49, 90);
+  box-shadow: 0px 10px 10px rgb(28, 35, 68, 0.2);
+  color: #fff !important;
+  transform: translateY(-1px);
+}

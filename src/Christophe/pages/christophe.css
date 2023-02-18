@@ -1,0 +1,16 @@
+.christopheContainer {
+  min-height: 100vh;
+  margin-top: 4rem;
+  background-color: rgb(8, 23, 36);
+  padding-bottom: 5rem;
+}
+
+
+h1, h3 {
+  margin: 6rem;
+  font-family: 'Dancing Script', cursive;
+  font-size: 3rem;
+
+}
+
+
