@@ -1,18 +1,26 @@
 import PizzasCard from './PizzasCard';
 
-const PizzasList = ( props ) => {
-  if (!props) {
+const PizzasList = ({ pizzas }) => {
+  if (!pizzas) {
     return (
       <div>
         <h3>Il n\'y a plus de pizzas désolé !!!</h3>
       </div>
     );
   } else {
-    const pizzasListing = props.articles.map((article) => {
-      return <PizzasCard name={props.name} price={props.price} />;
+    const pizzasListing = pizzas.map((pizza) => {
+      const { name, price, img } = pizza;
+
+      console.log(name, price, img);
+
+      return (
+        <>
+          <PizzasCard name={name} price={price} img={img} key={name} />
+        </>
+      );
     });
 
-    return <div>{pizzasListing}</div>;
+    return <section className="pizzaslist">{pizzasListing}</section>;
   }
 };
 

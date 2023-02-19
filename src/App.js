@@ -77,7 +77,7 @@ function App() {
                   path="/christophe/entreprises"
                   element={<Entreprises />}
                 />
-                <Route path="/christophe/pizzas" element={<Pizzas fakeData />} />
+                <Route path="/christophe/pizzas" element={<Pizzas />} />
               </Route>
             </Routes>
           </section>

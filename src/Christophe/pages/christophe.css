@@ -5,12 +5,15 @@
   padding-bottom: 5rem;
 }
 
-
-h1, h3 {
+h1,
+h3 {
   margin: 6rem;
   font-family: 'Dancing Script', cursive;
   font-size: 3rem;
-
 }
 
-
+.pizzaslist {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}

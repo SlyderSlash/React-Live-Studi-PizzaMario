@@ -1,0 +1,19 @@
+.ant-card {
+  background-color: #61dcfb;
+  margin: 1rem;
+  font-family: 'Dancing Script', cursive;
+  font-size: 1.5rem;
+}
+
+.ant-card-head-title {
+  font-size: 2.2rem;
+text-transform: capitalize;
+}
+
+.ant-card-body {
+  padding: 5px !important;
+}
+
+.ant-card-bordered {
+  border: none!important;
+}
