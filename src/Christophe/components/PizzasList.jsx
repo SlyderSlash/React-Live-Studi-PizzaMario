@@ -10,16 +10,8 @@ const PizzasList = ({ pizzas }) => {
   } else {
     const pizzasListing = pizzas.map((pizza) => {
       const { name, price, img } = pizza;
-
-      console.log(name, price, img);
-
-      return (
-        <>
-          <PizzasCard name={name} price={price} img={img} key={name} />
-        </>
-      );
+      return <PizzasCard name={name} price={price} img={img} key={name} />;
     });
-
     return <section className="pizzaslist">{pizzasListing}</section>;
   }
 };

@@ -1,0 +1,6 @@
+.listBlock {
+  display: flex;
+  justify-content: space-around;
+  margin : 2rem;
+  flex-wrap: wrap;
+}

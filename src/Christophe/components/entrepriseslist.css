@@ -1,0 +1,12 @@
+.description {
+  background-color: #61dbfb;
+  margin: 1rem;
+}
+
+.listUl {
+  display: block;
+}
+
+.ant-descriptions-header .ant-descriptions-title {
+  font-size: 1.5rem;
+}

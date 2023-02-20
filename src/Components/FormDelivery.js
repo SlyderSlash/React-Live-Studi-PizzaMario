@@ -5,7 +5,11 @@ import StateTypes from './../functions/StateTypes';
 const CitySelector = (props) => {
   const cityList = props.data.map((city) => {
     if (city.nomCommune)
-      return <option key={city.codeCommune} value={city.nomCommune}>{city.nomCommune}</option>;
+      return (
+        <option key={city.codeCommune} value={city.nomCommune}>
+          {city.nomCommune}
+        </option>
+      );
   });
   return (
     <select name="city" id="city">
@@ -38,7 +42,7 @@ const FormDelivery = (props) => {
   // Read : city
   // Update : setCity
   useEffect(() => {
-      if (StateTypes.number(zipCode)) return setError('Mauvais Code Postal'); 
+    if (StateTypes.number(zipCode)) return setError('Mauvais Code Postal');
   }, [zipCode]);
 
   const handleZipChange = (e) => {
@@ -56,16 +60,12 @@ const FormDelivery = (props) => {
                 }
               });
             } else {
-              setError(
-                `Aucune ville trouvé au code postal : ${e.target.value}`
-              );
+              setError(`Aucune ville trouvé au code postal : ${e.target.value}`);
               setCityList(false);
             }
           })
           .catch((err) => {
-            setError(
-              `Erreur lors de l'appel API, veuillez réessayer plus tard, cordialement`
-            );
+            setError(`Erreur lors de l'appel API, veuillez réessayer plus tard, cordialement`);
             console.error(err);
           });
       }
@@ -85,12 +85,7 @@ const FormDelivery = (props) => {
       <h1>Quel est votre adresse ? s'il vous plait</h1>
       {error && <span>{error}</span>}
       <label htmlFor="zipcode">Code Postal : </label>
-      <input
-        type="text"
-        name="zipcode"
-        value={zipCode}
-        onChange={handleZipChange}
-      />
+      <input type="text" name="zipcode" value={zipCode} onChange={handleZipChange} />
       {cityList ? <CitySelector data={cityList} /> : null}
     </>
   );
