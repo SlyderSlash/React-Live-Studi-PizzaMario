@@ -16,6 +16,7 @@ const Entreprises = () => {
         setError(`Erreur lors de l'appel API, veuillez réessayer plus tard, cordialement`);
         console.error(err);
       });
+    return setInputValue('');
   };
 
   const handleChange = (e) => {
@@ -35,7 +36,7 @@ const Entreprises = () => {
           Rechercher
         </button>
       </form>
-      <section className='listBlock'>
+      <section className="listBlock">
         <EntreprisesList data={entrepriseList} />
       </section>
     </>
