@@ -1,8 +1,6 @@
-import logo from './logo.svg';
 import './App.css';
-import { Button } from 'antd';
 import { ListArticles, TestComponent, FormDelivery } from './Components';
-import { BrowserRouter as Router, Routes, Route, NavLink } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import { Christophe, Entreprises, Home, Pizzas } from './Christophe';
 // index.css
 // App.css
@@ -36,16 +34,9 @@ function App() {
     <Router>
       <div className="App">
         <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <a className="App-link" href="https://reactjs.org" target="_blank" rel="noopener noreferrer">
-            Learn React
-          </a>
-          <NavLink to="/christophe/home">
-            <Button type="primary">Christophe</Button>
-          </NavLink>
-          <section className='appBlock'>
-            Edit <code>src/App.js</code> and Bonjour save to reload.
+          <section className="appBlock">
             <Routes>
+              <Route path="/" element={<Navigate to="/christophe/home" />} />
               <Route path="/Delivery" element={<FormDelivery />} />
               <Route path="/List" element={<ListArticles articles={fakeData} />} />
               <Route path="/Test" element={<TestComponent functionClick={addSomePoint} points={point} />} />
