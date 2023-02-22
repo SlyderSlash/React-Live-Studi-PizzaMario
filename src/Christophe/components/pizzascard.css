@@ -5,15 +5,16 @@
   font-size: 1.5rem;
 }
 
-.ant-card-head-title {
-  font-size: 2.2rem;
-text-transform: capitalize;
-}
 
 .ant-card-body {
   padding: 5px !important;
 }
 
 .ant-card-bordered {
-  border: none!important;
+  border: none !important;
+}
+
+.ant-card-meta-detail .ant-card-meta-title {
+  font-size: 2rem;
+  text-transform: capitalize;
 }

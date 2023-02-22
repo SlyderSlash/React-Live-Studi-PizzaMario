@@ -1,6 +1,6 @@
 import { Card } from 'antd';
 import './pizzascard.css';
-
+const { Meta } = Card;
 
 const PizzasCard = ({ name, price, img }) => {
   return (
@@ -18,10 +18,17 @@ const PizzasCard = ({ name, price, img }) => {
             }}
           />
         }
-
         bordered={false}
       >
-        <Card title={name}>{price} €</Card>
+        <Meta
+          title={name}
+          description={price + '€'}
+          style={{
+            height: 120,
+            display: 'flex',
+            alignItems: 'center',
+          }}
+        />
       </Card>
     </>
   );

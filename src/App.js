@@ -2,6 +2,7 @@ import './App.css';
 import { ListArticles, TestComponent, FormDelivery } from './Components';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import { Christophe, Entreprises, Home, Pizzas } from './Christophe';
+import Compteur from './Christophe/components/Compteur';
 // index.css
 // App.css
 // Shop.css
@@ -45,6 +46,7 @@ function App() {
                 <Route path="/christophe/home" element={<Home />} />
                 <Route path="/christophe/entreprises" element={<Entreprises />} />
                 <Route path="/christophe/pizzas" element={<Pizzas />} />
+                <Route path="/christophe/compteur" element={<Compteur />} />
               </Route>
             </Routes>
           </section>

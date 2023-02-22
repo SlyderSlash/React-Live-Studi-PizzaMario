@@ -17,6 +17,11 @@ const Nav = () => {
           </NavLink>
         </li>
         <li>
+          <NavLink to="/christophe/compteur">
+            <Button className="homeButton">Compteur</Button>
+          </NavLink>
+        </li>
+        <li>
           <NavLink to="/christophe/entreprises">
             <Button className="homeButton">Entreprises</Button>
           </NavLink>

@@ -1,6 +1,7 @@
 import { useState } from 'react';
-import EntreprisesList from './EntreprisesList';
+/* import EntreprisesList from './EntreprisesList'; */
 import './entreprises.css';
+import Test from './EntreprisesList';
 
 const Entreprises = () => {
   const [entrepriseList, setEntreprisesList] = useState([]); // API grâce nom de l'entreprise
@@ -25,7 +26,7 @@ const Entreprises = () => {
 
   return (
     <>
-      <h3>Requête sur des entreprises françaises</h3>
+      <h3>Requêter les entreprises</h3>
 
       <h5>Nom de l'entreprise recherchée :</h5>
       {error && <span>{error}</span>}
@@ -37,7 +38,8 @@ const Entreprises = () => {
         </button>
       </form>
       <section className="listBlock">
-        <EntreprisesList data={entrepriseList} />
+       {/*  <EntreprisesList data={entrepriseList} /> */}
+        <Test data={entrepriseList}/>
       </section>
     </>
   );

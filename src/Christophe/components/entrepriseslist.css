@@ -1,6 +1,8 @@
 .description {
-  background-color: #61dbfb;
+  background-color: #1a2f42fd;
   margin: 1rem;
+  border-radius: 5px;
+  max-width: 1000px;
 }
 
 .listUl {
@@ -9,4 +11,26 @@
 
 .ant-descriptions-header .ant-descriptions-title {
   font-size: 1.5rem;
+  padding-top: 1rem;
+  color: #ffffff;
+}
+
+.fonction {
+  font-size: 0.5rem;
+}
+
+th {
+  border: 1px solid rgb(7, 49, 66);
+  text-align: center !important;
+  color: #339cb6 !important;
+  background-color: rgba(7, 133, 150, 0.068) !important;
+  width: 5%;
+}
+
+td {
+  border: 1px solid rgb(7, 49, 66);
+  text-align: center !important;
+  color: #85becc !important;
+  background-color: rgba(27, 165, 230, 0.068) !important;
+  font-size: 0.8rem!important;
 }

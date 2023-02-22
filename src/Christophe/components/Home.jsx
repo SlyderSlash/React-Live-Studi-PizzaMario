@@ -1,4 +1,5 @@
 import banniere from '../assets/img/banniere.jpg';
+import './home.css';
 
 const Home = () => {
   return (
