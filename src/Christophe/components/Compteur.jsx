@@ -1,24 +1,46 @@
+/* eslint-disable react/jsx-no-duplicate-props */
 import { useState } from 'react';
 import { Badge, Image } from 'antd';
 import avatar from '../assets/img/avatar.jpg';
+import associe from '../assets/img/associe.jpg';
 import { LikeOutlined, DislikeOutlined } from '@ant-design/icons';
 
 const Compteur = () => {
   const [countAvatar, setCountAvatar] = useState(null);
+  const [countAssocie, setCountAssocie] = useState(null);
 
-  const [visible, setVisible] = useState(false);
-
-  const handlePlus = () => {
-    setCountAvatar(countAvatar + 1);
+  // incrémente compteur de like selon le film
+  const handlePlus = (movie) => {
+    switch (movie) {
+      case 'avatar':
+        setCountAvatar(countAvatar + 1);
+        break;
+      case 'associe':
+        setCountAssocie(countAssocie + 1);
+        break;
+      default:
+        break;
+    }
   };
 
-  const handleMinus = () => {
-    setCountAvatar(countAvatar - 1);
+  // décrémente compteur de like selon le film
+
+  const handleMinus = (movie) => {
+    switch (movie) {
+      case 'avatar':
+        setCountAvatar(countAvatar - 1);
+        break;
+      case 'associe':
+        setCountAssocie(countAssocie - 1);
+        break;
+      default:
+        break;
+    }
   };
 
-  // badge vert si positif et rouge si négatif
-  const handleBackground = () => {
-    return countAvatar > 0 ? { backgroundColor: '#52c41a' } : { backgroundColor: '#c4421a' };
+  // badge vert si positif et rouge si négatif selon le compteur du film
+  const handleBackground = (movieCount) => {
+    return movieCount > 0 ? { backgroundColor: '#52c41a' } : { backgroundColor: '#c4421a' };
   };
 
   return (
@@ -27,38 +49,50 @@ const Compteur = () => {
       <div className="imgagesBlock">
         {/* ------- -------- avatar ---------------- */}
         <div className="imgageAndButton">
-          <Badge count={countAvatar} style={handleBackground()}>
+          <Badge count={countAvatar} style={handleBackground(countAvatar)}>
             {/*  <Avatar shape="square" src={avatar} className="avatar" size={300}/> */}
-            <Image preview={{ visible: false }} width={250} src={avatar} onClick={() => setVisible(true)} />
-            <div style={{ display: 'none' }}>
-              <Image.PreviewGroup preview={{ visible, onVisibleChange: (vis) => setVisible(vis) }}>
-                <Image src={avatar} />
-              </Image.PreviewGroup>
-            </div>
+            <Image
+              width={280}
+              height={400}
+              src={avatar}
+              preview={{
+                src: avatar,
+              }}
+            />
           </Badge>
           <div className="buttonBlock">
-            <LikeOutlined style={{ color: '#00ff2a' }} onClick={handlePlus} className="btn btn-good" />
-            <DislikeOutlined style={{ color: '#ff0000' }} onClick={handleMinus} className="btn btn-bad" />
+            <LikeOutlined style={{ color: '#00ff2a' }} onClick={() => handlePlus('avatar')} className="btn btn-good" />
+            <DislikeOutlined
+              style={{ color: '#ff0000' }}
+              onClick={() => handleMinus('avatar')}
+              className="btn btn-bad"
+            />
           </div>
         </div>
         {/* ------- -------- fin avatar ---------------- */}
-        {/* ------- -------- avatar ---------------- */}
+        {/* ------- -------- associé du diable ---------------- */}
         <div className="imgageAndButton">
-          <Badge count={countAvatar} style={handleBackground()}>
+          <Badge count={countAssocie} style={handleBackground(countAssocie)}>
             {/*  <Avatar shape="square" src={avatar} className="avatar" size={300}/> */}
-            <Image preview={{ visible: false }} width={250} src={avatar} onClick={() => setVisible(true)} />
-            <div style={{ display: 'none' }}>
-              <Image.PreviewGroup preview={{ visible, onVisibleChange: (vis) => setVisible(vis) }}>
-                <Image src={avatar} />
-              </Image.PreviewGroup>
-            </div>
+            <Image
+              width={280}
+              height={400}
+              src={associe}
+              preview={{
+                src: associe,
+              }}
+            />
           </Badge>
           <div className="buttonBlock">
-            <LikeOutlined style={{ color: '#00ff2a' }} onClick={handlePlus} className="btn btn-good" />
-            <DislikeOutlined style={{ color: '#ff0000' }} onClick={handleMinus} className="btn btn-bad" />
+            <LikeOutlined style={{ color: '#00ff2a' }} onClick={() => handlePlus('associe')} className="btn btn-good" />
+            <DislikeOutlined
+              style={{ color: '#ff0000' }}
+              onClick={() => handleMinus('associe')}
+              className="btn btn-bad"
+            />
           </div>
         </div>
-        {/* ------- -------- fin avatar ---------------- */}
+        {/* ------- -------- fin associé du diable ---------------- */}
       </div>
     </div>
   );
