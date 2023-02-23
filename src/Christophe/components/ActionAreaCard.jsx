@@ -10,12 +10,18 @@ export default function ActionAreaCard({ name, price, img }) {
     <>
       <Card className="card">
         <CardActionArea>
-          <CardMedia component="img" height="140" image={img} alt= {"image" + name}/>
+          <CardMedia component="img" height="140" image={img} alt={'image' + name} />
           <CardContent>
-            <Typography gutterBottom variant="h5" component="div" className='cardTitle'>
+            <Typography
+              gutterBottom
+              variant="h5"
+              component="div"
+              className="cardTitle"
+              style={{ textTransform: 'Capitalize' }}
+            >
               {name}
             </Typography>
-            <Typography variant="body2" color="text.secondary" className='cardPrice'>
+            <Typography variant="body2" color="text.secondary" className="cardPrice">
               {price} €
             </Typography>
           </CardContent>

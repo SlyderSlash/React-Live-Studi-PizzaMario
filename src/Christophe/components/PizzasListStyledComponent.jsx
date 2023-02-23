@@ -8,7 +8,7 @@ const StyledPizzasListStyledComponent = styled.li`
     display: block;
     content: '';
     margin-top: 0.7rem;
-    width: 60%;
+    width: 70%;
     padding-left: 50px;
     border-bottom: solid 2px #1b444b;
     transform: scaleX(0);
@@ -23,8 +23,12 @@ const StyledPizzasListStyledComponent = styled.li`
 const PizzasListStyledComponent = ({ name, price }) => {
   return (
     // retourne une li stylisée
-    <StyledPizzasListStyledComponent>
-      <span style={{ color: '#61dbfb', fontSize: '2rem' }}>{name}</span> : <span className="price">{price}</span> €
+    <StyledPizzasListStyledComponent style={{ color: '#fff', fontSize: '2rem', textTransform: 'uppercase' }}>
+      <span style={{ color: '#61dbfb', fontSize: '2rem', textTransform: 'uppercase' }}>{name}</span> :{' '}
+      <span style={{ fontSize: '2rem',color: '#fff' }} className="price">
+        {price}
+      </span>{' '}
+      €
     </StyledPizzasListStyledComponent>
   );
 };

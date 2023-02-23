@@ -1,4 +1,4 @@
-import PizzasList from './PizzasList';
+import PizzasList from '../components/PizzasList';
 import margarita from '../assets/img/margarita.jpg';
 import fromages from '../assets/img/fromages.jpg';
 import saumon from '../assets/img/saumon.jpg';

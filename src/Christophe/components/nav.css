@@ -31,7 +31,7 @@ ul li {
 
 .homeButton {
   background-color: rgb(28, 35, 68);
-  color: #61dbfb;
+  color: #61dcfbc9;
   border: none;
   box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease 0s;
@@ -40,7 +40,7 @@ ul li {
 .homeButton:hover {
   background-color: rgb(38, 49, 90);
   box-shadow: 0px 10px 10px rgb(28, 35, 68, 0.2);
-  color: #fff !important;
+  color: #61dbfb !important;
   transform: translateY(-1px);
 }
 

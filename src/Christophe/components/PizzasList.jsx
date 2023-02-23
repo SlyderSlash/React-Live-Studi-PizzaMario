@@ -24,7 +24,7 @@ const PizzasList = ({ pizzas }) => {
     return (
       <>
         <section className="pizzaslist">
-          <ul style={{ display: 'block', textAlign:'left', width:'300px' }} className="listpizzali">
+          <ul style={{ display: 'block', textAlign:'left', width:'350px' }} className="listpizzali">
             {pizzasList}
           </ul>
         </section>

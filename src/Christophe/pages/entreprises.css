@@ -1,0 +1,25 @@
+.listBlock {
+  display: flex;
+  justify-content: space-around;
+  margin: 2rem;
+  flex-wrap: wrap;
+}
+
+input {
+  background-color: rgb(54, 121, 138) !important;
+  border-color: #61dcfb7e !important;
+}
+
+input::placeholder {
+  color: rgba(255, 255, 255, 0.548) !important;
+}
+
+input:focus {
+  border-color: #61dbfb !important;
+  color: #61dbfb;
+}
+
+.ant-input-search-button {
+  background-color: #61dbfb !important;
+  border: none;
+}

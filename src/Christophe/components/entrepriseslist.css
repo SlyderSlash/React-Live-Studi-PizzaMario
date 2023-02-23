@@ -2,11 +2,22 @@
   background-color: #1a2f42fd;
   margin: 1rem;
   border-radius: 5px;
+  width: 100%;
   max-width: 1000px;
 }
 
 .listUl {
   display: block;
+  list-style-type: none;
+  width: auto;
+}
+
+.listUl li {
+  margin-bottom: 0rem;
+}
+
+.listUl li p {
+  margin-top: 0.5rem;
 }
 
 .ant-descriptions-header .ant-descriptions-title {
@@ -32,5 +43,5 @@ td {
   text-align: center !important;
   color: #85becc !important;
   background-color: rgba(27, 165, 230, 0.068) !important;
-  font-size: 0.8rem!important;
+  font-size: 0.8rem !important;
 }

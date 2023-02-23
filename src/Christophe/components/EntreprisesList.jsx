@@ -4,16 +4,13 @@ import { Descriptions } from 'antd';
 const EntreprisesList = (props) => {
   const { data } = props;
 
-  
-
   const list = data.map((entreprise) => {
     const dirigeants = entreprise.dirigeants.map((dirigeant) => {
       return (
-        <>
-          <li>{dirigeant.nom}</li>
-          <li>{dirigeant.prenoms}</li>
-          <li className="fonction">{dirigeant.qualite}</li>
-        </>
+        <li key={dirigeant.prenoms + dirigeant.nom + dirigeant.qualite}>
+          <span>{dirigeant.prenoms}</span> <span>{dirigeant.nom}</span>
+          <p className="fonction">{dirigeant.qualite}</p>
+        </li>
       );
     });
 
@@ -36,7 +33,9 @@ const EntreprisesList = (props) => {
         <Descriptions.Item label="dirigeants">
           <ul className="listUl">{dirigeants}</ul>
         </Descriptions.Item>
-        <Descriptions.Item label="date de création">{new Date((entreprise.siege.date_creation)).toLocaleDateString("fr")}</Descriptions.Item>
+        <Descriptions.Item label="date de création">
+          {new Date(entreprise.siege.date_creation).toLocaleDateString('fr')}
+        </Descriptions.Item>
         <Descriptions.Item label="nombre d'établissements">{entreprise.nombre_etablissements}</Descriptions.Item>
         <Descriptions.Item label="numéro de siren">{entreprise.siren}</Descriptions.Item>
       </Descriptions>
