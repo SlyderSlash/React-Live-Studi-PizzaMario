@@ -10,7 +10,7 @@ export default function ActionAreaCard({ name, price, img }) {
     <>
       <Card className="card">
         <CardActionArea>
-          <CardMedia component="img" height="140" image={img} alt={'image' + name} />
+          <CardMedia component="img" height="200" image={img} alt={'image' + name} />
           <CardContent>
             <Typography
               gutterBottom
