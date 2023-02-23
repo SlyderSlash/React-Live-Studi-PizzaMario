@@ -24,7 +24,6 @@ const Compteur = () => {
   };
 
   // décrémente compteur de like selon le film
-
   const handleMinus = (movie) => {
     switch (movie) {
       case 'avatar':
@@ -47,10 +46,9 @@ const Compteur = () => {
     <div className="compteurBlock">
       <h1>Compteur de like</h1>
       <div className="imgagesBlock">
-        {/* ------- -------- avatar ---------------- */}
+        {/* -------------- avatar ---------------- */}
         <div className="imgageAndButton">
           <Badge count={countAvatar} style={handleBackground(countAvatar)}>
-            {/*  <Avatar shape="square" src={avatar} className="avatar" size={300}/> */}
             <Image
               width={280}
               height={400}
@@ -69,11 +67,9 @@ const Compteur = () => {
             />
           </div>
         </div>
-        {/* ------- -------- fin avatar ---------------- */}
-        {/* ------- -------- associé du diable ---------------- */}
+        {/* ---------- associé du diable --------- */}
         <div className="imgageAndButton">
           <Badge count={countAssocie} style={handleBackground(countAssocie)}>
-            {/*  <Avatar shape="square" src={avatar} className="avatar" size={300}/> */}
             <Image
               width={280}
               height={400}
@@ -92,7 +88,6 @@ const Compteur = () => {
             />
           </div>
         </div>
-        {/* ------- -------- fin associé du diable ---------------- */}
       </div>
     </div>
   );

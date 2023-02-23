@@ -26,7 +26,7 @@ const Pizzas = () => {
 
   return (
     <>
-      <h3>Carte des Pizzas</h3>
+      <h3>Liste et carte des pizzas</h3>
       <PizzasList pizzas={dataPizzas} />
     </>
   );
