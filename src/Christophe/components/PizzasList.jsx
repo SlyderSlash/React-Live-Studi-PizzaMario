@@ -1,4 +1,4 @@
-import PizzasCard from './PizzasCard';
+import ActionAreaCard from './ActionAreaCard';
 import PizzasListStyledComponent from './PizzasListStyledComponent';
 import './pizzaslist.css';
 
@@ -18,7 +18,7 @@ const PizzasList = ({ pizzas }) => {
     // boucle liste des pizzas sous forme card
     const pizzasCard = pizzas.map((pizza) => {
       const { name, price, img } = pizza;
-      return <PizzasCard name={name} price={price} img={img} key={name} />;
+      return <ActionAreaCard name={name} price={price} img={img} key={name} />;
     });
 
     return (

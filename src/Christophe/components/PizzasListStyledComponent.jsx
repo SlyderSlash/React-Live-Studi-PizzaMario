@@ -1,5 +1,3 @@
-import './pizzascard.css';
-
 import styled from 'styled-components';
 
 const StyledPizzasListStyledComponent = styled.li`
@@ -24,6 +22,7 @@ const StyledPizzasListStyledComponent = styled.li`
 
 const PizzasListStyledComponent = ({ name, price }) => {
   return (
+    // retourne une li stylisée
     <StyledPizzasListStyledComponent>
       <span style={{ color: '#61dbfb', fontSize: '2rem' }}>{name}</span> : <span className="price">{price}</span> €
     </StyledPizzasListStyledComponent>

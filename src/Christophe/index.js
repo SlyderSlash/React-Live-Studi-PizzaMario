@@ -4,7 +4,7 @@ import Entreprises from './components/Entreprises';
 import Home from './components/Home';
 import Pizzas from './components/Pizzas';
 import PizzasList from './components/PizzasList';
-import PizzasCard from './components/PizzasCard';
+import PizzasCard from './components/ActionAreaCard';
 import PizzasListStyledComponent from './components/PizzasListStyledComponent';
 import Compteur from './components/Compteur';
 
