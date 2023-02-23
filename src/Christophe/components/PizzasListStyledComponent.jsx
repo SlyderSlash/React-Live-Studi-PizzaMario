@@ -12,7 +12,7 @@ const StyledPizzasListStyledComponent = styled.li`
     margin-top: 0.7rem;
     width: 60%;
     padding-left: 50px;
-    border-bottom: solid 1px #1b444b;
+    border-bottom: solid 2px #1b444b;
     transform: scaleX(0);
     transition: transform 250ms ease-in-out;
   }
