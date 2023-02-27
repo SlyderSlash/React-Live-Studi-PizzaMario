@@ -2,8 +2,10 @@ import {useEffect, useState} from 'react'
 import PropTypes from 'prop-types'
 import StateTypes from './../functions/StateTypes'
 
+
+
 const CitySelector = (props) => {
-    const cityList = props.data.map(city => {
+    const cityList = props.data.map(city =>  {
         if (city.nomCommune) return <option value={city.nomCommune}>{city.nomCommune}</option>
     })
     return (

@@ -1,15 +1,17 @@
 import {CardArticle} from './CardArticle'
+import Article from './Article'
 
 function ListArticles (props) {
     if(!props){return <div><h1>Pas d'article</h1></div>}
     else {
         const articlesListing = props.articles.map((article)=> {
-            if (article.price) return <CardArticle name={article.name} price={article.price}/>
+            if (article.price) 
+            return <Article name={article.name} price={article.price}/>
             else return null
         })
         console.log(articlesListing)
         return (
-            <div>
+            <div className='pizzaCards'>
                 {articlesListing}
             </div>
         )
