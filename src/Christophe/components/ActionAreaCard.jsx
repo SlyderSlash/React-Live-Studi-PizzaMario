@@ -6,27 +6,27 @@ import Typography from '@mui/material/Typography';
 import { CardActionArea } from '@mui/material';
 
 export default function ActionAreaCard({ name, price, img }) {
-  return (
-    <>
-      <Card className="card">
-        <CardActionArea>
-          <CardMedia component="img" height="200" image={img} alt={'image' + name} />
-          <CardContent>
-            <Typography
-              gutterBottom
-              variant="h5"
-              component="div"
-              className="cardTitle"
-              style={{ textTransform: 'Capitalize' }}
-            >
-              {name}
-            </Typography>
-            <Typography variant="body2" color="text.secondary" className="cardPrice">
-              {price} €
-            </Typography>
-          </CardContent>
-        </CardActionArea>
-      </Card>
-    </>
-  );
+    return (
+        <>
+            <Card className="card">
+                <CardActionArea>
+                    <CardMedia component="img" height="200" image={img} alt={'image' + name} />
+                    <CardContent>
+                        <Typography
+                            gutterBottom
+                            variant="h5"
+                            component="div"
+                            className="cardTitle"
+                            style={{ textTransform: 'Capitalize' }}
+                        >
+                            {name}
+                        </Typography>
+                        <Typography variant="body2" color="text.secondary" className="cardPrice">
+                            {price} €
+                        </Typography>
+                    </CardContent>
+                </CardActionArea>
+            </Card>
+        </>
+    );
 }

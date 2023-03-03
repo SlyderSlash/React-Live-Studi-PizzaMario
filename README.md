@@ -1,5 +1,5 @@
 
-# test de base avec React.js et antDesign
+# test de base avec antDesign, styled-components et material UI
 
 badges, card, compteurs, etc...
 
